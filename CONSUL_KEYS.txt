@@ -1,0 +1,8 @@
+THESE KEYS ACTIVATE THE PRICING AND BOOKING FEATURES:
+symbol/EURUSD/price	1.1578
+symbol/EURGBP/price	0.8813
+symbol/EURJPY/price	124.57
+symbol/EURUSD/precision	5
+symbol/EURGBP/precision	5
+symbol/EURJPY/precision	3
+ladder/quantities	5000000,10000000,25000000

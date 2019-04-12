@@ -1,0 +1,47 @@
+version: '3.7'
+
+services:
+
+ consul:
+  image: consul:latest
+  volumes:
+  - ./consul.json:/etc/consul/consul.json
+  command: consul agent -config-file=/etc/consul/consul.json -server -client 0.0.0.0 -ui -bootstrap-expect=1 -data-dir=/consul/data -datacenter=blr
+  ports:
+    - "8500:8500"
+    - "8600:8600/udp"
+  networks:
+    - mutualized
+
+ scope:
+     image: weaveworks/scope:latest
+     hostname: weave-scope
+     pid: "host"
+     privileged: true
+     ports:
+       - "4040:4040"
+     expose:
+       - "4040"
+     labels:
+       - "works.weave.role=system"
+     volumes:
+       - "/var/run/docker.sock:/var/run/docker.sock:rw"
+     command:
+       - "--probe.docker"
+       - "true"
+     networks:
+       - mutualized
+       - monitoring
+       - front 
+       - back
+
+networks:
+ mutualized:
+  driver: bridge
+  external: true
+ front:
+  external: true
+ back: 
+  external: true
+ monitoring: 
+  external: true
