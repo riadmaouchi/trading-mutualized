@@ -71,11 +71,11 @@ services:
     image: swaggerapi/swagger-ui
     labels:
       - "traefik.backend=swagger"
-      - "traefik.port=8090"
+      - "traefik.port=8080"
       - "traefik.frontend.rule=Host:swagger.trading.localhost"
       - "traefik.docker.network=back"
     ports:
-      - "8090:8080"
+      - "8080"
     networks:
       - back
 
