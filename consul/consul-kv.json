@@ -1,0 +1,37 @@
+[
+  {
+    "key": "ladder/quantities",
+    "flags": 0,
+    "value": "NTAwMDAwMCwxMDAwMDAwMCwyNTAwMDAwMA=="
+  },
+  {
+    "key": "symbol/EURGBP/precision",
+    "flags": 0,
+    "value": "NQ=="
+  },
+  {
+    "key": "symbol/EURGBP/price",
+    "flags": 0,
+    "value": "MC44ODEz"
+  },
+  {
+    "key": "symbol/EURJPY/precision",
+    "flags": 0,
+    "value": "Mw=="
+  },
+  {
+    "key": "symbol/EURJPY/price",
+    "flags": 0,
+    "value": "MTI0LjU3"
+  },
+  {
+    "key": "symbol/EURUSD/precision",
+    "flags": 0,
+    "value": "NQ=="
+  },
+  {
+    "key": "symbol/EURUSD/price",
+    "flags": 0,
+    "value": "MS4xNTc4"
+  }
+]

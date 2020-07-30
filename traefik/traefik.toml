@@ -1,0 +1,28 @@
+debug = false
+
+logLevel = "INFO"
+defaultEntryPoints = ["http"]
+
+[respondingTimeouts]
+  readTimeout = "0s"
+  writeTimeout = "0s"
+  idleTimeout = "0s"
+
+[forwardingTimeouts]
+  dialTimeout = "30s"
+  responseHeaderTimeout = "0s"
+
+[entryPoints]
+  [entryPoints.http]
+  address = ":80"
+
+[retry]
+
+[docker]
+endpoint = "unix:///var/run/docker.sock"
+domain = "trading.localhost"
+exposedbydefault = false
+watch = true
+network = "back"
+
+
